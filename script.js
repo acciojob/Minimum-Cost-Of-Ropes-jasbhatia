@@ -6,6 +6,7 @@ function calculateMinCost() {
   for (var i = 0; i < inputArr.length; i++) {
     inputArr[i] = Number(inputArr[i]);
   }
+inputArr.sort(function(a,b){return a-b});
   var cost = 0;
 
   while (inputArr.length > 1) {
@@ -16,6 +17,7 @@ function calculateMinCost() {
     inputArr.splice(0, 2);
     inputArr.push(newRope);
     //alert(newRope);
+	  inputArr.sort(function(a,b){return a-b});
   }
   document.querySelector("#result").textContent = cost;
 }
